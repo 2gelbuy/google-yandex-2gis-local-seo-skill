@@ -9,6 +9,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
 AI_HERO_SOURCE = ASSETS / "ai-generated-google-yandex-2gis-local-seo.png"
+WORKFLOW_SOURCE = ASSETS / "ai-generated-local-seo-map-background.png"
 HERO_OUT = ASSETS / "gpt-image-google-yandex-2gis-local-seo-cover.png"
 WORKFLOW_OUT = ASSETS / "local-seo-workflow.png"
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
@@ -81,56 +82,68 @@ def draw_arrow(draw, start, end):
 
 
 def render_workflow() -> None:
-    w, h = 1400, 540
-    img = vertical_gradient((w, h), (248, 250, 252), (232, 244, 255))
+    if not WORKFLOW_SOURCE.exists():
+        raise FileNotFoundError(f"missing internal generated source: {WORKFLOW_SOURCE}")
+
+    target = (1600, 760)
+    src = Image.open(WORKFLOW_SOURCE).convert("RGB")
+    scale = max(target[0] / src.width, target[1] / src.height)
+    resized = src.resize(
+        (math.ceil(src.width * scale), math.ceil(src.height * scale)),
+        Image.Resampling.LANCZOS,
+    )
+    left = (resized.width - target[0]) // 2
+    top = (resized.height - target[1]) // 2
+    img = resized.crop((left, top, left + target[0], top + target[1])).convert("RGBA")
+
+    # Darken and add left-side readability gradient without flattening the map.
+    shade = Image.new("RGBA", target, (2, 8, 23, 62))
+    img.alpha_composite(shade)
+    grad = Image.new("RGBA", target, (0, 0, 0, 0))
+    gp = grad.load()
+    for x in range(target[0]):
+        t = max(0, 1 - x / 1040)
+        alpha = int(198 * (t**1.35))
+        for y in range(target[1]):
+            gp[x, y] = (2, 6, 23, alpha)
+    img.alpha_composite(grad)
+
     draw = ImageDraw.Draw(img)
 
-    draw.text(
-        (64, 70),
-        "Проверенные факты -> безопасные правки в картах",
-        font=font(34, True),
-        fill="#0f172a",
-    )
-    draw.text(
-        (64, 108),
-        "Skill не обещает топ. Он находит расхождения и готовит действия по правилам платформ.",
-        font=font(19),
-        fill="#475569",
-    )
+    def card(box, border, title, body):
+        x1, y1, x2, y2 = box
+        layer = Image.new("RGBA", target, (0, 0, 0, 0))
+        d = ImageDraw.Draw(layer)
+        d.rounded_rectangle((x1, y1, x2, y2), radius=24, fill=(6, 18, 36, 214), outline=border, width=2)
+        img.alpha_composite(layer)
+        draw.text((x1 + 28, y1 + 24), title, font=font(24, True), fill="#ffffff")
+        draw.text((x1 + 28, y1 + 64), body, font=font(18), fill="#cbd5e1")
 
-    boxes = [
-        ((64, 178, 304, 316), "#ffffff", "Бизнес-факты", ["название, адрес, телефон", "часы, сайт, geo, город"]),
-        ((388, 132, 626, 222), "#dbeafe", "Google", ["Business Profile / Maps"]),
-        ((388, 242, 626, 332), "#fef3c7", "Яндекс", ["Бизнес / Карты / Webmaster"]),
-        ((388, 352, 626, 442), "#dcfce7", "2ГИС", ["карточки, рубрики, отзывы"]),
-        ((726, 198, 992, 338), "#ffffff", "NAP + schema", ["сайт, карты, справочники", "JSON-LD и соцпрофили"]),
-        ((1080, 178, 1340, 316), "#ffffff", "Приоритеты", ["что исправить первым", "как проверить результат"]),
-    ]
-    for box, fill, title, lines in boxes:
-        draw_box(draw, img, box, fill, title, lines)
+    draw.rounded_rectangle((56, 56, 404, 106), radius=25, fill=(15, 23, 42, 188), outline="#38bdf8", width=2)
+    draw.text((86, 69), "skill для СНГ и RU/KZ", font=font(24, True), fill="#38bdf8")
 
-    for start, end in [
-        ((304, 246), (382, 178)),
-        ((304, 246), (382, 286)),
-        ((304, 246), (382, 398)),
-        ((626, 178), (716, 252)),
-        ((626, 286), (716, 276)),
-        ((626, 398), (716, 312)),
-        ((992, 270), (1072, 246)),
-    ]:
-        draw_arrow(draw, start, end)
+    draw.text((56, 176), "Как работает", font=font(68, True), fill="#ffffff")
+    draw.text((56, 258), "локальное SEO", font=font(86, True), fill="#ffffff")
+    draw.text((56, 352), "Google + Яндекс + 2ГИС", font=font(47, True), fill="#facc15")
+    draw.text((60, 420), "Факты бизнеса -> карты -> NAP/schema -> безопасные правки", font=font(28, True), fill="#dbeafe")
+
+    card((60, 506, 388, 640), "#38bdf8", "1. Факты", "адрес, телефон,\nчасы, город, филиал")
+    card((420, 506, 748, 640), "#facc15", "2. Карты", "Google, Яндекс,\n2ГИС и справочники")
+    card((780, 506, 1108, 640), "#22c55e", "3. Сверка", "NAP, schema,\nдубли и рубрики")
+    card((1140, 506, 1540, 640), "#fb7185", "4. Правки", "без фейковых отзывов,\nфилиалов и обещаний топа")
 
     chips = [
-        (64, "нет фейковых филиалов", "#fee2e2", "#991b1b"),
-        (404, "нет накрутки отзывов", "#fee2e2", "#991b1b"),
-        (704, "нет обещаний топа", "#fee2e2", "#991b1b"),
-        (1000, "только проверенные факты", "#dcfce7", "#166534"),
+        (60, 682, "нет накрутки отзывов", "#facc15"),
+        (386, 682, "нет фейковых филиалов", "#38bdf8"),
+        (734, 682, "только проверенные факты", "#22c55e"),
+        (1138, 682, "правки только после OK", "#fb7185"),
     ]
-    for x, label, fill, color in chips:
-        draw.rounded_rectangle((x, 456, x + 320, 502), radius=23, fill=fill)
-        draw.text((x + 24, 468), label, font=font(17, True), fill=color)
+    for x, y, text, color in chips:
+        w = 292 if "OK" not in text else 338
+        draw.rounded_rectangle((x, y, x + w, y + 48), radius=24, fill=(15, 23, 42, 220), outline=color, width=2)
+        draw.text((x + 24, y + 13), text, font=font(17, True), fill=color)
 
-    img.save(WORKFLOW_OUT, optimize=True)
+    img.convert("RGB").save(WORKFLOW_OUT, optimize=True, quality=92)
 
 
 def main() -> None:

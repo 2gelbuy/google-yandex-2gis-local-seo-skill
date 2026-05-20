@@ -185,6 +185,10 @@ skill, Codex skill, OpenCode skill, Cursor skill, Gemini CLI skill.
 This is an independent agent skill. It is not affiliated with Google, Yandex, or
 2GIS.
 
+## Author
+
+Created and maintained by [Tugelbay Konabayev](https://konabayev.com/).
+
 ## License
 
 MIT
