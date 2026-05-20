@@ -1,49 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
-  <title id="title">Local SEO workflow for CIS maps and directories</title>
-  <desc id="desc">Workflow diagram showing verified facts flowing into Google, Yandex, 2GIS, NAP, schema, and safe prioritized fixes.</desc>
-  <rect width="1200" height="420" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="540" viewBox="0 0 1400 540" role="img" aria-labelledby="title desc">
+  <title id="title">Как работает Google Yandex 2GIS Local SEO Skill</title>
+  <desc id="desc">Русскоязычная схема workflow: проверенные бизнес-факты проходят через Google, Яндекс и 2ГИС, затем сверяются с NAP и schema.</desc>
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
     </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef6ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.16"/>
+    </filter>
   </defs>
-  <text x="52" y="54" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="800" fill="#111827">Verified local facts in, safe map/profile fixes out</text>
-  <text x="52" y="86" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" fill="#64748b">No fake branches. No fake reviews. No ranking promises. Platform rules first.</text>
+  <rect width="1400" height="540" rx="28" fill="url(#bg)"/>
+  <text x="64" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="900" fill="#0f172a">Проверенные факты → безопасные правки в картах</text>
+  <text x="64" y="106" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#475569">Skill не обещает топ. Он находит реальные расхождения и готовит действия, которые не ломают правила платформ.</text>
 
-  <g font-family="Inter, Segoe UI, Arial, sans-serif">
-    <rect x="52" y="138" width="210" height="100" rx="18" fill="#f8fafc" stroke="#cbd5e1"/>
-    <text x="82" y="178" font-size="18" font-weight="800" fill="#111827">Business facts</text>
-    <text x="82" y="205" font-size="14" fill="#475569">Name, address, phone</text>
-    <text x="82" y="226" font-size="14" fill="#475569">hours, URL, geo, cities</text>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" filter="url(#shadow)">
+    <rect x="64" y="178" width="238" height="130" rx="22" fill="#ffffff"/>
+    <text x="94" y="220" font-size="22" font-weight="900" fill="#0f172a">Бизнес-факты</text>
+    <text x="94" y="252" font-size="16" fill="#475569">название, адрес, телефон</text>
+    <text x="94" y="278" font-size="16" fill="#475569">часы, сайт, geo, город</text>
 
-    <rect x="330" y="116" width="190" height="70" rx="16" fill="#e8f0fe" stroke="#93c5fd"/>
-    <text x="362" y="158" font-size="17" font-weight="800" fill="#1e3a8a">Google</text>
-    <text x="426" y="158" font-size="14" fill="#334155">GBP / Maps</text>
+    <rect x="388" y="142" width="226" height="82" rx="20" fill="#dbeafe" stroke="#60a5fa"/>
+    <text x="424" y="174" font-size="20" font-weight="900" fill="#0f172a">Google</text>
+    <text x="424" y="200" font-size="15" fill="#334155">Business Profile / Maps</text>
 
-    <rect x="330" y="204" width="190" height="70" rx="16" fill="#fff7d6" stroke="#fde68a"/>
-    <text x="362" y="246" font-size="17" font-weight="800" fill="#854d0e">Yandex</text>
-    <text x="430" y="246" font-size="14" fill="#334155">Business / Maps</text>
+    <rect x="388" y="244" width="226" height="82" rx="20" fill="#fef3c7" stroke="#facc15"/>
+    <text x="424" y="276" font-size="20" font-weight="900" fill="#0f172a">Яндекс</text>
+    <text x="424" y="302" font-size="15" fill="#334155">Бизнес / Карты / Webmaster</text>
 
-    <rect x="330" y="292" width="190" height="70" rx="16" fill="#dcfce7" stroke="#86efac"/>
-    <text x="362" y="334" font-size="17" font-weight="800" fill="#166534">2GIS</text>
-    <text x="418" y="334" font-size="14" fill="#334155">cards / rubrics</text>
+    <rect x="388" y="346" width="226" height="82" rx="20" fill="#dcfce7" stroke="#4ade80"/>
+    <text x="424" y="378" font-size="20" font-weight="900" fill="#0f172a">2ГИС</text>
+    <text x="424" y="404" font-size="15" fill="#334155">карточки, рубрики, отзывы</text>
 
-    <rect x="602" y="138" width="210" height="100" rx="18" fill="#f8fafc" stroke="#cbd5e1"/>
-    <text x="632" y="178" font-size="18" font-weight="800" fill="#111827">NAP + schema</text>
-    <text x="632" y="205" font-size="14" fill="#475569">Compare site, maps,</text>
-    <text x="632" y="226" font-size="14" fill="#475569">directories, JSON-LD</text>
+    <rect x="706" y="208" width="254" height="130" rx="22" fill="#ffffff"/>
+    <text x="736" y="250" font-size="22" font-weight="900" fill="#0f172a">NAP + schema</text>
+    <text x="736" y="282" font-size="16" fill="#475569">сайт, карты, справочники</text>
+    <text x="736" y="308" font-size="16" fill="#475569">JSON-LD и соцпрофили</text>
 
-    <rect x="890" y="138" width="250" height="100" rx="18" fill="#f8fafc" stroke="#cbd5e1"/>
-    <text x="920" y="178" font-size="18" font-weight="800" fill="#111827">Prioritized fixes</text>
-    <text x="920" y="205" font-size="14" fill="#475569">Drafts, audits, evidence,</text>
-    <text x="920" y="226" font-size="14" fill="#475569">approval-gated writes</text>
+    <rect x="1052" y="178" width="284" height="130" rx="22" fill="#ffffff"/>
+    <text x="1082" y="220" font-size="22" font-weight="900" fill="#0f172a">Приоритеты</text>
+    <text x="1082" y="252" font-size="16" fill="#475569">что исправить первым</text>
+    <text x="1082" y="278" font-size="16" fill="#475569">и как проверить результат</text>
   </g>
 
-  <path d="M262 188 L322 150" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
-  <path d="M262 188 L322 238" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
-  <path d="M262 188 L322 326" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
-  <path d="M520 150 L594 184" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
-  <path d="M520 238 L594 190" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
-  <path d="M520 326 L594 205" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
-  <path d="M812 188 L882 188" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M302 244 L378 182" stroke="#334155" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M302 244 L378 284" stroke="#334155" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M302 244 L378 386" stroke="#334155" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M614 182 L696 260" stroke="#334155" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M614 284 L696 278" stroke="#334155" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M614 386 L696 302" stroke="#334155" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M960 272 L1042 244" stroke="#334155" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="64" y="452" width="328" height="42" rx="21" fill="#fee2e2"/>
+    <text x="88" y="480" font-size="16" font-weight="800" fill="#991b1b">нет фейковых филиалов</text>
+    <rect x="414" y="452" width="286" height="42" rx="21" fill="#fee2e2"/>
+    <text x="438" y="480" font-size="16" font-weight="800" fill="#991b1b">нет накрутки отзывов</text>
+    <rect x="722" y="452" width="276" height="42" rx="21" fill="#fee2e2"/>
+    <text x="746" y="480" font-size="16" font-weight="800" fill="#991b1b">нет обещаний топа</text>
+    <rect x="1020" y="452" width="316" height="42" rx="21" fill="#dcfce7"/>
+    <text x="1044" y="480" font-size="16" font-weight="800" fill="#166534">только проверенные факты</text>
+  </g>
 </svg>

@@ -14,6 +14,10 @@ Fresh search-result checks showed repeated RU/CIS phrasing around:
 - `продвижение в 2ГИС`
 - `продвижение в Google Картах`
 - `карточка организации`
+- `оформить карточку организации`
+- `ведение карточек`
+- `Яндекс Справочник`
+- `карточка компании в 2ГИС`
 - `геосервисы`
 - `карты и справочники`
 - `отзывы`, `рубрики`, `фото`, `филиалы`
@@ -33,13 +37,22 @@ Agent-skill discovery also needs English/platform terms:
 
 ## Source Examples
 
-- Topvisor local SEO guide result mentions Яндекс Карты, Google Maps, and 2GIS.
-- SeoNews local SEO result frames the work as profile optimization for
-  Яндекс Карты, Google Карты, and 2GIS.
-- Multiple agency/service results frame the category as `продвижение на
-  Яндекс Картах`, `продвижение в 2ГИС`, and `Google Карты`.
-- Vercel `skills` docs describe `npx skills` as supporting OpenCode, Claude
-  Code, Codex, Cursor, and many additional agents.
+- 34web local SEO result frames visibility around geoservices such as Яндекс
+  Карты, Google Карты, 2GIS, Авито, and Яндекс Услуги:
+  https://34web.ru/blog/professionalnaya-nastroyka-lokalnogo-seo-po-11-osnovnym-pravilam/
+- Topvisor local SEO guide result mentions Яндекс Карты, Google Maps, and 2GIS:
+  https://journal.topvisor.com/ru/practice/local-seo-guide/
+- SeoNews local SEO result frames the work as profile optimization for Яндекс
+  Карты, Google Карты, and 2GIS:
+  https://m.seonews.ru/analytics/lokalnoe-seo-prodvigaem-kompaniyu-na-geoservisakh-svoimi-rukami/
+- RocketData frames map promotion as work across geoservices, directories, and
+  related local surfaces:
+  https://rocketdata.ru/blog/5-instrumentov-dlya-prodvizheniya-biznesa-na-kartakh-v-novoy-realnosti
+- Service pages in the search results explicitly use combinations like
+  `продвижение на Яндекс.Картах, Google и 2ГИС`.
+- `npx skills --help` lists `-a, --agent`, `-s, --skill`, `--all`,
+  `--copy`, project installs, global installs, and JSON listing; the README
+  install block uses those verified flags.
 
 ## README Implication
 

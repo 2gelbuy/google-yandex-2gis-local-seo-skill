@@ -1,6 +1,10 @@
-# Google Yandex 2GIS Local SEO Skill
+# Локальное SEO для Google, Яндекс и 2ГИС
 
-![Google Yandex 2GIS Local SEO Skill cover](assets/google-yandex-2gis-local-seo-cover.svg)
+RU-first agent skill для аудита карточек организации в Google Business Profile,
+Google Maps, Яндекс Бизнесе, Яндекс Картах, 2ГИС/2GIS, Yandex Webmaster,
+справочниках, NAP и LocalBusiness schema.
+
+![Локальное SEO для Google, Яндекс и 2ГИС](assets/gpt-image-google-yandex-2gis-local-seo-cover.png)
 
 [![skills.sh](https://skills.sh/b/2gelbuy/google-yandex-2gis-local-seo-skill)](https://skills.sh/2gelbuy/google-yandex-2gis-local-seo-skill)
 [![GitHub release](https://img.shields.io/github/v/release/2gelbuy/google-yandex-2gis-local-seo-skill?style=flat-square)](https://github.com/2gelbuy/google-yandex-2gis-local-seo-skill/releases)
@@ -8,50 +12,65 @@
 [![Agent Skills](https://img.shields.io/badge/agent-skills-blue?style=flat-square)](https://skills.sh)
 [![Platforms](https://img.shields.io/badge/platforms-Codex%20%7C%20Claude%20Code%20%7C%20OpenCode%20%7C%20Cursor%20%7C%20Gemini%20CLI-informational?style=flat-square)](#install-in-popular-agents)
 
-An agent skill for **local SEO in CIS / RU / KZ markets**: Google Business
-Profile, Google Maps, Яндекс Бизнес, Яндекс Карты, Yandex Webmaster, 2GIS/2ГИС,
-NAP consistency, LocalBusiness schema, reviews, photos, branch pages, city
-pages, and local citations.
+**Google Yandex 2GIS Local SEO Skill** помогает агенту проверять локальное SEO,
+продвижение на Яндекс Картах, продвижение в 2ГИС и состояние карточек
+организации без фейковых адресов, накрутки отзывов, keyword stuffing и обещаний
+“вывести в топ”.
 
-Русское позиционирование: **локальное SEO для Google, Яндекс и 2ГИС**. Skill
-помогает агенту проверять карточки организации, карты, справочники, филиалы,
-адреса, рубрики, отзывы, фото и schema без фейковых отзывов, выдуманных адресов,
-лишних филиалов, keyword stuffing и обещаний “выведем в топ”.
+Skill держит фокус на русскоязычном рынке, СНГ и Казахстане: карточка компании,
+филиалы, адреса, телефоны, часы работы, рубрики, отзывы, фото, услуги, цены,
+сайт, schema, городские страницы и справочники должны говорить одно и то же.
 
-## Why This Exists
+## Для Чего
 
-Most local SEO skills are written for the US/Google-only workflow. CIS projects
-usually need a different stack:
+- Проверить карточку организации перед правками в Google, Яндекс и 2ГИС.
+- Найти расхождения в NAP: название, адрес, телефон, сайт, часы, город, филиал.
+- Подготовить безопасный план правок для Яндекс Бизнеса, Google Business
+  Profile, 2ГИС, сайта и справочников.
+- Проверить рубрики, услуги, товары, фото, отзывы, дубли карточек и модерацию.
+- Сверить сайт, LocalBusiness schema, city pages, branch pages и профили в
+  картах.
+- Не дать агенту придумать филиал, рейтинг, цену, лицензию, фото или обещание
+  результата.
 
-![Local SEO workflow](assets/local-seo-workflow.svg)
+![Как работает Google Yandex 2GIS Local SEO Skill](assets/local-seo-workflow.png)
 
-- Google Business Profile and Google Maps still matter.
-- Яндекс Бизнес, Яндекс Карты, and Yandex Webmaster are first-class surfaces.
-- 2GIS/2ГИС is not just a citation row; it is a real discovery and conversion
-  surface with cards, rubrics, contacts, entrances, photos, reviews, services,
-  products, prices, and moderation.
-- Local-business facts must match across the website, schema, maps, directories,
-  social profiles, and analytics exports.
+## Почему Не Просто `local-seo`
 
-## Search Intent This README Targets
+Большинство local SEO skills написаны под US/Google-only workflow. Для
+русскоязычных проектов нужен стек, где:
 
-The wording is based on current search-result patterns for RU/CIS local SEO,
-map-promotion, and agent-skill queries. People search for combinations like:
+- Google Business Profile и Google Maps важны, но не единственная поверхность.
+- Яндекс Бизнес, Яндекс Карты и Yandex Webmaster являются first-class каналами.
+- 2GIS/2ГИС не “просто citation”: это карточки, рубрики, контакты, входы,
+  этажи, фото, отзывы, услуги, товары, цены и модерация.
+- Геосервисы, карты и справочники должны совпадать с сайтом, schema,
+  соцпрофилями и аналитикой.
 
-| Query pattern | Why the skill uses it |
+## Search Intent
+
+README и название repo сделаны service-explicit, потому что реальные запросы в
+RU/CIS выдаче чаще называют платформы и практические сущности, а не только
+абстрактное “local SEO”.
+
+| Query pattern | Why it is included |
 | --- | --- |
-| `локальное SEO` | Broad category name for geo/local promotion. |
-| `продвижение на Яндекс Картах` | High-intent service query around Yandex Maps visibility. |
-| `продвижение в 2ГИС` / `2GIS` | CIS/KZ discovery channel and common agency-service phrase. |
-| `Google Business Profile` / `Google Maps` | International platform naming and agent-search keyword. |
-| `карточка организации` | Practical wording used around map/business profile optimization. |
-| `геосервисы` / `карты и справочники` | RU-market umbrella language for Yandex Maps, Google Maps, 2GIS, directories. |
-| `NAP`, `LocalBusiness schema` | Technical SEO queries and agent-skill discoverability. |
-| `local SEO skill`, `Claude Code SEO skill`, `Codex skill` | Agent directory / GitHub discovery queries. |
+| `локальное SEO` | Широкая категория для geo/local продвижения. |
+| `продвижение на Яндекс Картах` | Высокоинтентный RU-запрос вокруг видимости в Яндекс Картах. |
+| `продвижение в 2ГИС` / `2GIS` | Частая СНГ/КЗ формулировка для видимости в 2ГИС. |
+| `Google Business Profile` / `Google Maps` | Международные platform terms и агентские поисковые ключи. |
+| `карточка организации` | Практический термин для профиля компании в картах и справочниках. |
+| `оформить карточку организации` | Интент создания/заполнения карточки. |
+| `ведение карточек` | Интент регулярного обслуживания карточек и отзывов. |
+| `Яндекс Справочник` | Старый, но до сих пор узнаваемый термин вокруг Яндекс Бизнеса. |
+| `карточка компании в 2ГИС` | Прямой интент по 2ГИС, не только общий SEO-запрос. |
+| `геосервисы` / `карты и справочники` | RU-market umbrella language для Яндекс Карт, Google Maps, 2ГИС и каталогов. |
+| `NAP`, `LocalBusiness schema` | Техническое SEO и agent-skill discoverability. |
+| `local SEO skill`, `Codex skill`, `Claude Code SEO skill`, `OpenCode skill`, `Cursor skill` | GitHub, skills.sh и agent-directory discovery. |
 
-No ranking, traffic, indexing, or moderation outcome is guaranteed. The skill is
-designed to keep agents inside verified business facts and official platform
-rules.
+Source checks used for the copy include Topvisor, 34web, SeoNews, RocketData,
+Revvy, VC.ru, WebFront, OpenCode docs and the `skills` CLI help output. No
+ranking, traffic, indexing, moderation, or map-pack outcome is guaranteed.
 
 ## Install
 
@@ -61,28 +80,35 @@ List the skill:
 npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill --list
 ```
 
-Install it:
+Install globally for Codex:
 
 ```bash
-npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill --skill google-yandex-2gis-local-seo
+npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill -g -a codex -s google-yandex-2gis-local-seo -y
 ```
 
-Install it globally for Codex:
+Install into the current project instead of global agent folders:
 
 ```bash
-npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill --skill google-yandex-2gis-local-seo -g -a codex -y
+npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill -s google-yandex-2gis-local-seo -y
 ```
 
-Install to all detected supported agents:
+Install to every target agent directory that the `skills` CLI supports:
 
 ```bash
-npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill --skill google-yandex-2gis-local-seo -g -a '*' -y
+npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill -g -a '*' -s google-yandex-2gis-local-seo -y
+```
+
+Check what is installed for a specific agent:
+
+```bash
+npx skills list -g -a codex --json
 ```
 
 ## Install In Popular Agents
 
-The `skills` CLI supports OpenCode, Claude Code, Codex, Cursor, Gemini CLI,
-GitHub Copilot, Windsurf, Cline, and many more. Use the agent id in `-a`.
+These are `skills` CLI install targets. Native skill loading depends on the
+agent's current runtime, but the installed `SKILL.md` remains plain Markdown and
+can be loaded manually when a tool does not yet auto-discover skills.
 
 | Agent / IDE | Install command |
 | --- | --- |
@@ -93,15 +119,16 @@ GitHub Copilot, Windsurf, Cline, and many more. Use the agent id in `-a`.
 | Gemini CLI | `npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill -g -a gemini-cli -s google-yandex-2gis-local-seo -y` |
 | GitHub Copilot | `npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill -g -a github-copilot -s google-yandex-2gis-local-seo -y` |
 | Windsurf | `npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill -g -a windsurf -s google-yandex-2gis-local-seo -y` |
-| Cline / Warp-compatible path | `npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill -g -a cline -s google-yandex-2gis-local-seo -y` |
+| Cline | `npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill -g -a cline -s google-yandex-2gis-local-seo -y` |
+| Warp | `npx skills add 2gelbuy/google-yandex-2gis-local-seo-skill -g -a warp -s google-yandex-2gis-local-seo -y` |
 
 ## What It Audits
 
 | Surface | Checks |
 | --- | --- |
-| Google Business Profile / Google Maps | verified status, category, address/service area, hours, URL, phone, photos, services, posts, reviews, API quota/access state |
-| Яндекс Бизнес / Яндекс Карты | publication/moderation, address confirmation, rubric/activity, contacts, photos, reviews, products/services/YML, Webmaster regionality |
-| 2GIS / 2ГИС | card existence, cabinet/access state, map point, entrance, office/floor/intercom, contacts, rubrics, services/products/prices, photos, reviews, duplicates, moderation |
+| Google Business Profile / Google Maps | access and ownership state, verification, categories, address/service area, hours, URL, phone, photos, services, posts, reviews, API quota/access state |
+| Яндекс Бизнес / Яндекс Карты | publication/moderation, address confirmation, rubrics/activity type, contacts, hours, photos, reviews, products/services/YML, Webmaster regionality |
+| 2GIS / 2ГИС | card existence, cabinet/access state, map point, entrance, office/floor/intercom, contacts, website/social links, rubrics, services/products/prices, photos, reviews, duplicates, moderation |
 | Website and schema | visible NAP, city pages, branch pages, LocalBusiness/Organization/Florist JSON-LD, canonical/index status |
 | Citations and profiles | directory/social NAP drift, wrong URLs, duplicate cards, stale hours, wrong phones, inconsistent rubrics |
 
@@ -146,11 +173,12 @@ For high-risk work, refresh official platform docs before publishing changes.
 
 локальное SEO, локальное SEO СНГ, локальное SEO Казахстан, продвижение на
 Яндекс Картах, продвижение в 2ГИС, продвижение в Google Картах, Google Business
-Profile, Google Maps, Яндекс Бизнес, Yandex Business, Yandex Webmaster, Яндекс
-Карты, 2ГИС, 2GIS, карточка организации, карты, справочники, геосервисы, NAP,
-LocalBusiness schema, отзывы, фотографии, филиалы, city pages, branch pages,
-local citations, local SEO skill, Claude Code SEO skill, Codex skill, OpenCode
-skill, Cursor skill.
+Profile, Google Maps, Яндекс Бизнес, Yandex Business, Яндекс Справочник, Yandex
+Webmaster, Яндекс Карты, 2ГИС, 2GIS, карточка организации, карточка компании в
+2ГИС, оформить карточку организации, ведение карточек, карты, справочники,
+геосервисы, NAP, LocalBusiness schema, отзывы, фотографии, рубрики, филиалы,
+city pages, branch pages, local citations, local SEO skill, Claude Code SEO
+skill, Codex skill, OpenCode skill, Cursor skill, Gemini CLI skill.
 
 ## Not Official
 
