@@ -33,7 +33,7 @@ Skill держит фокус на русскоязычном рынке, СНГ
 - Не дать агенту придумать филиал, рейтинг, цену, лицензию, фото или обещание
   результата.
 
-![Как работает Google Yandex 2GIS Local SEO Skill](assets/local-seo-workflow.png)
+![Как работает Google Yandex 2GIS Local SEO Skill](assets/local-seo-workflow-promo.png)
 
 ## Почему Не Просто `local-seo`
 

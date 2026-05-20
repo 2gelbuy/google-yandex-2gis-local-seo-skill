@@ -11,7 +11,7 @@ ASSETS = ROOT / "assets"
 AI_HERO_SOURCE = ASSETS / "ai-generated-google-yandex-2gis-local-seo.png"
 WORKFLOW_SOURCE = ASSETS / "ai-generated-local-seo-map-background.png"
 HERO_OUT = ASSETS / "gpt-image-google-yandex-2gis-local-seo-cover.png"
-WORKFLOW_OUT = ASSETS / "local-seo-workflow.png"
+WORKFLOW_OUT = ASSETS / "local-seo-workflow-promo.png"
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 
