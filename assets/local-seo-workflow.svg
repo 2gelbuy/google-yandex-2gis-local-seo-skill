@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Local SEO workflow for CIS maps and directories</title>
+  <desc id="desc">Workflow diagram showing verified facts flowing into Google, Yandex, 2GIS, NAP, schema, and safe prioritized fixes.</desc>
+  <rect width="1200" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <text x="52" y="54" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="800" fill="#111827">Verified local facts in, safe map/profile fixes out</text>
+  <text x="52" y="86" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" fill="#64748b">No fake branches. No fake reviews. No ranking promises. Platform rules first.</text>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="52" y="138" width="210" height="100" rx="18" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="82" y="178" font-size="18" font-weight="800" fill="#111827">Business facts</text>
+    <text x="82" y="205" font-size="14" fill="#475569">Name, address, phone</text>
+    <text x="82" y="226" font-size="14" fill="#475569">hours, URL, geo, cities</text>
+
+    <rect x="330" y="116" width="190" height="70" rx="16" fill="#e8f0fe" stroke="#93c5fd"/>
+    <text x="362" y="158" font-size="17" font-weight="800" fill="#1e3a8a">Google</text>
+    <text x="426" y="158" font-size="14" fill="#334155">GBP / Maps</text>
+
+    <rect x="330" y="204" width="190" height="70" rx="16" fill="#fff7d6" stroke="#fde68a"/>
+    <text x="362" y="246" font-size="17" font-weight="800" fill="#854d0e">Yandex</text>
+    <text x="430" y="246" font-size="14" fill="#334155">Business / Maps</text>
+
+    <rect x="330" y="292" width="190" height="70" rx="16" fill="#dcfce7" stroke="#86efac"/>
+    <text x="362" y="334" font-size="17" font-weight="800" fill="#166534">2GIS</text>
+    <text x="418" y="334" font-size="14" fill="#334155">cards / rubrics</text>
+
+    <rect x="602" y="138" width="210" height="100" rx="18" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="632" y="178" font-size="18" font-weight="800" fill="#111827">NAP + schema</text>
+    <text x="632" y="205" font-size="14" fill="#475569">Compare site, maps,</text>
+    <text x="632" y="226" font-size="14" fill="#475569">directories, JSON-LD</text>
+
+    <rect x="890" y="138" width="250" height="100" rx="18" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="920" y="178" font-size="18" font-weight="800" fill="#111827">Prioritized fixes</text>
+    <text x="920" y="205" font-size="14" fill="#475569">Drafts, audits, evidence,</text>
+    <text x="920" y="226" font-size="14" fill="#475569">approval-gated writes</text>
+  </g>
+
+  <path d="M262 188 L322 150" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M262 188 L322 238" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M262 188 L322 326" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M520 150 L594 184" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M520 238 L594 190" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M520 326 L594 205" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M812 188 L882 188" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+</svg>
