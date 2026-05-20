@@ -1,0 +1,4 @@
+interface:
+  display_name: "Google Yandex 2GIS Local SEO"
+  short_description: "Safe Google/Yandex/2GIS local SEO workflow"
+  default_prompt: "Use $google-yandex-2gis-local-seo to audit CIS local SEO from verified Google, Yandex, 2GIS, maps, NAP, and schema facts, then produce safe prioritized fixes."
